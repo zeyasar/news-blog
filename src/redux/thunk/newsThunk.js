@@ -2,12 +2,14 @@ import { setNewsList } from "../actions/newsActions";
 import axios from "axios";
 import { setLoading, clearLoading } from "../actions/appActions";
 
+const apiKey = process.env.REACT_APP_NEWSAPIKEY;
+
 const url =
   "https://newsapi.org/v2/everything?" +
   "q=Apple&" +
   "from=2022-04-18&" +
   "sortBy=popularity&" +
-  `apiKey=41d6a5347a1f449490560ba2fbea6d1b`;
+  `apiKey=${apiKey}`;
 
 export const getNews = async (dispatch) => {
     try {
