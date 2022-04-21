@@ -26,7 +26,7 @@ const News = () => {
     dispatch(getNews);
   }, [dispatch]);
 
-  const shareUrl = "http://localhost:3000";
+  const shareUrl = "https://news-blog-react.netlify.app";
 
   return (
     <>
