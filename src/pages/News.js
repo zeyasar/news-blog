@@ -10,12 +10,7 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import loadingGif from "../assets/loading.gif";
 import { getNews } from "../redux/thunk/newsThunk";
-// import {
-//   FacebookShareButton,
-//   TwitterShareButton,
-//   WhatsappShareButton,
-// } from "react-share";
-// import { FacebookIcon, TwitterIcon, WhatsappIcon } from "react-share";
+
 
 const News = () => {
   const dispatch = useDispatch();
@@ -26,7 +21,7 @@ const News = () => {
     dispatch(getNews);
   }, [dispatch]);
 
-  // const shareUrl = "https://news-blog-react-app.netlify.app";
+ 
 
   return (
     <>
@@ -64,17 +59,7 @@ const News = () => {
                 </Typography>
               </CardContent>
               <CardActions style={{ display: "flex", justifyContent:'space-between'}}>
-                <div>
-                  {/* <FacebookShareButton url={shareUrl}>
-                    <FacebookIcon size={32} round={true} />
-                  </FacebookShareButton>
-                  <TwitterShareButton url={shareUrl}>
-                    <TwitterIcon size={32} round={true} />
-                  </TwitterShareButton>
-                  <WhatsappShareButton url={shareUrl}>
-                    <WhatsappIcon size={32} round={true} />
-                  </WhatsappShareButton> */}
-                </div>
+                <Button size="small">Share</Button>
                 <Button size="small" href={item?.url} target="_blank">
                   Detail
                 </Button>

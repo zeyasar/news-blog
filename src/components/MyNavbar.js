@@ -18,6 +18,7 @@ const MyNavbar = () => {
   const {currentUser} = useSelector(state => state.auth)
   
   const [anchorEl, setAnchorEl] = React.useState(null);
+  console.log(currentUser)
 
   const handleMenu = (event) => {
     setAnchorEl(event.currentTarget);
@@ -64,7 +65,7 @@ const MyNavbar = () => {
                     marginRight: "1rem",
                   }}
                 >
-                  {currentUser?.displayName}
+                  {currentUser?.email}
                 </Typography>
                 <AccountCircle />
               </IconButton>
