@@ -18,7 +18,6 @@ const MyNavbar = () => {
   const {currentUser} = useSelector(state => state.auth)
   
   const [anchorEl, setAnchorEl] = React.useState(null);
-  console.log(currentUser)
 
   const handleMenu = (event) => {
     setAnchorEl(event.currentTarget);
