@@ -14,7 +14,7 @@ const url =
 export const getNews = async (dispatch) => {
     try {
       dispatch(setLoading())
-      const {data} = await axios.get(url)
+      const {data} = await axios.get(url, {headers:{'Access-Control-Allow-Origin': '*'}})
       dispatch(setNewsList(data.articles))
     } catch (error) {
       console.log(error);
